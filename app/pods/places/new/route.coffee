@@ -2,8 +2,7 @@
 
 PlacesNewRoute = Ember.Route.extend
   model: ->
-    return @store.createRecord 'place',
-      place: @modelFor 'places/new'
+    return @store.createRecord 'place'
 
   actions:
     save: ->
