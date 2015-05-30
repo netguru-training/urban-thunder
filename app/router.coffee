@@ -6,6 +6,7 @@ Router = Ember.Router.extend
 
 Router.map ->
 
+  @route 'landing-page', path: ''
   @resource 'places', ->
   @resource 'users', ->
 
