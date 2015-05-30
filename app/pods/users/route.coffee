@@ -5,7 +5,7 @@ UsersRoute = Ember.Route.extend
   model: ->
     @store.createRecord 'user'
 
-  firebase: Ember.inject.service('firebase')
+  firebase: Ember.inject.service()
 
   actions:
     save: (model) ->
