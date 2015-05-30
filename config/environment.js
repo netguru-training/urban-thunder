@@ -5,7 +5,6 @@ module.exports = function(environment) {
     modulePrefix: 'urban-thunder',
     podModulePrefix: 'urban-thunder/pods',
     environment: environment,
-    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
     firebase: 'https://incandescent-fire-6856.firebaseio.com/',
     enableFirebase: true,
     baseURL: '/',
