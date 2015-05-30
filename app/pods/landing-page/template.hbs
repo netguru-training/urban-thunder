@@ -11,11 +11,16 @@
 </section>
 <section class="container">
 <div class="spot">
-  <h3>Superspot</h3>
-  <p>Gdzie: <span>kosmos</span></p>
-  <p>Opis: najlepsze miejsce do wszystkiego </p>
-  <p>ile propsów: 500</p>
 
+  <ul>
+    {{#each place in model}}
+    <li>
+      {{#link-to 'place' this}}
+      Test
+      {{/link-to}}
+    </li>
+    {{/each}}
+  </ul>
   <p></p>
 </div>
 </section>
