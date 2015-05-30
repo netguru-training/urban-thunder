@@ -1,6 +1,9 @@
 places index
 <ul>
   {{#each place in model}}
-  <li>{{place.name}}</li>
+    <li>
+      {{place.name}}
+      {{link-to 'edit' 'places.edit' place}}
+    </li>
   {{/each}}
 </ul>

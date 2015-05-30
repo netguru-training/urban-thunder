@@ -9,6 +9,7 @@ Router.map ->
   @route 'landing-page', path: ''
   @resource 'places', ->
     @route 'new'
+    @route 'edit', path: ':place_id'
   @resource 'users', ->
     @route 'sign-up'
 
