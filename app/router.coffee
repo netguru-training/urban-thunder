@@ -9,5 +9,6 @@ Router.map ->
   @route 'landing-page', path: ''
   @resource 'places', ->
   @resource 'users', ->
+    @route 'sign-up'
 
 `export default Router`
