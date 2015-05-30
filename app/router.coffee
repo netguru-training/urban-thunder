@@ -9,7 +9,6 @@ Router.map ->
   @route 'landing-page', path: ''
   @resource 'places', ->
     @route 'new'
-    @route 'index'
   @resource 'users', ->
     @route 'sign-up'
 
