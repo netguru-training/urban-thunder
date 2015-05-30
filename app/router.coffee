@@ -11,6 +11,7 @@ Router.map ->
     @route 'new'
     @resource 'place', path: ':place_id', ->
       @route 'show', path: '/'
+      @route 'edit'
   @resource 'users', ->
     @route 'sign-in'
     @route 'sign-up'
