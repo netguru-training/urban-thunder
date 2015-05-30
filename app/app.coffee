@@ -8,6 +8,7 @@ Ember.MODEL_FACTORY_INJECTIONS = true
 App = Ember.Application.extend
   modulePrefix: config.modulePrefix
   Resolver: Resolver
+  podModulePrefix: 'urban-thunder/pods'
 
 loadInitializers(App, config.modulePrefix);
 
