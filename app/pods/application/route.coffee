@@ -1,6 +1,7 @@
 `import Ember from 'ember'`
+`import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin'`
 
-ApplicationRoute = Ember.Route.extend
+ApplicationRoute = Ember.Route.extend ApplicationRouteMixin,
   model: ->
     Ember.A([
       {title: "Home", lat: 14.766127, lng: 102.810987, body: "Here is B&H's home"},

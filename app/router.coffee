@@ -16,6 +16,5 @@ Router.map ->
     @route 'sign-in'
     @route 'sign-up'
     @route 'sign-out'
-  @route 'users/sign-out'
 
 `export default Router`
