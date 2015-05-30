@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'urban-thunder',
+    podModulePrefix: 'urban-thunder/pods',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
     firebase: 'https://YOUR-FIREBASE-NAME.firebaseio.com/',
