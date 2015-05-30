@@ -6,6 +6,8 @@ UsersRoute = Ember.Route.extend
 
   actions:
     save: (model) ->
-      model.save()
+      if model.get('isValid')
+        model.save()
+        @transitionTo 'users'
 
 `export default UsersRoute`
