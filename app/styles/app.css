@@ -1,1 +1,11 @@
+jumbotron {
+  background-image: url("http://i.imgur.com/WDrSL82.jpg") !important;
+}
 
+
+.spot {
+  background-color: rgb(213, 212, 212);
+  width: 25vw;
+  min-height: 15vw;
+  border-radius: 10px;
+}
