@@ -5,10 +5,11 @@ UsersRoute = Ember.Route.extend
   model: ->
     @store.createRecord 'user'
 
+  firebase: Ember.inject.service('firebase')
+
   actions:
     save: (model) ->
-      ref = new Firebase(config.firebase)
-      ref.createUser
+      @get('firebase.ref').createUser
         email: model.get('email')
         password: model.get('password')
       , (error, userData) =>
@@ -16,5 +17,16 @@ UsersRoute = Ember.Route.extend
           console.log error
         else
           @transitionTo 'users'
+
+    sign_in: (model) ->
+      @get('firebase.ref').authWithPassword
+        email: model.get('email')
+        password: model.get('password')
+      , (error, userData) =>
+        if error
+          console.log error
+        else
+          console.log userData
+
 
 `export default UsersRoute`
