@@ -2,6 +2,6 @@
 
 LandingPageRoute = Ember.Route.extend
   model: ->
-    this.store.findAll('place')
+    @store.findAll('place')
 
 `export default LandingPageRoute`
