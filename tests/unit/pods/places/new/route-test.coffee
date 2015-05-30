@@ -1,6 +1,6 @@
 # `import { test, moduleFor } from 'ember-qunit'`
 
-# moduleFor 'route:places', {
+# moduleFor 'route:places/new', {
 #   # Specify the other units that are required for this test.
 #   # needs: ['controller:foo']
 # }
