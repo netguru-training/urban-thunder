@@ -10,6 +10,7 @@ Router.map ->
   @resource 'places', ->
     @route 'new'
     @route 'edit', path: ':place_id'
+    @resource 'place', path: ':place_id'
   @resource 'users', ->
     @route 'sign-up'
 
