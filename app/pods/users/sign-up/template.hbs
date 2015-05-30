@@ -1,7 +1,13 @@
 <h3>Sign Up</h3>
 
 <form {{action "save" model on="submit"}}>
-  {{ input value=model.email }}
-  {{ input type="password" value=model.password }}
-  <input type="submit" value="Save" />
+  <div class="form-group">
+    <label for="email">Email address</label>
+    {{ input value=model.email class="form-control" }}
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    {{ input type="password" value=model.password class="form-control" }}
+  </div>
+  <button type="submit" class="btn btn-default">Save</button>
 </form>
