@@ -8,6 +8,7 @@ Router.map ->
 
   @route 'landing-page', path: ''
   @resource 'places', ->
+    @route 'index'
   @resource 'users', ->
     @route 'sign-up'
 
