@@ -1,12 +1,10 @@
-places index
-<ul>
-  {{#each place in model}}
-  <li>
-    {{#link-to 'places.show' place}}
-      {{place.name}}
+{{#each place in model}}
+  <div class="spot">
+    {{#link-to 'place' place}}
+      <p>CO: {{place.name}}</p>
     {{/link-to}}
-  </li>
-  {{/each}}
-</ul>
-
+    <p>JAK: {{place.description}}</p>
+    <p>GDZIE: {{place.location}}</p>
+  </div>
+{{/each}}
 {{outlet}}

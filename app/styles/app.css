@@ -7,9 +7,11 @@
 
 .spot {
   background-color: rgb(213, 212, 212);
-  width: 25vw;
-  min-height: 15vw;
-  border-radius: 10px;
+  width: 13em;;
+  min-height: 10em;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 10px;
 }
 
 .map-canvas {
