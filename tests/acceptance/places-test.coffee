@@ -28,5 +28,5 @@ test 'visiting /places/new', (assert) ->
   click '.button--save'
 
   andThen ->
-    assert.equal currentRouteName(), 'places'
+    assert.equal currentRouteName(), 'places.index'
 
