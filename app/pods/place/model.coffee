@@ -5,6 +5,8 @@ Place = DS.Model.extend {
   description: DS.attr 'string'
   location: DS.attr 'string'
   user: DS.belongsTo 'user'
+  lat: DS.attr 'string'
+  lng: DS.attr 'string'
 }
 
 `export default Place`
