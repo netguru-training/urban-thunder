@@ -12,7 +12,7 @@ PlacesNewRoute = Ember.Route.extend
       return
 
     cancel: ->
-      this.transitionTo('places')
+      @transitionTo('places')
       return
 
   deactivate: ->
