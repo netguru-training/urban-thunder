@@ -5,10 +5,11 @@ UsersRoute = Ember.Route.extend
   model: ->
     @store.createRecord 'user'
 
+  firebase: Ember.inject.service('firebase')
+
   actions:
     save: (model) ->
-      ref = new Firebase(config.firebase)
-      ref.createUser
+      @get('firebase.ref').createUser
         email: model.get('email')
         password: model.get('password')
       , (error, userData) =>
