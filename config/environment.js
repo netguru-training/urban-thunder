@@ -7,6 +7,7 @@ module.exports = function(environment) {
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
     firebase: 'https://incandescent-fire-6856.firebaseio.com/',
+    enableFirebase: true,
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -34,6 +35,7 @@ module.exports = function(environment) {
     // Testem prefers this...
     ENV.baseURL = '/';
     ENV.locationType = 'none';
+    ENV.enableFirebase = false;
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
