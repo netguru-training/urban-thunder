@@ -18,4 +18,15 @@ UsersRoute = Ember.Route.extend
         else
           @transitionTo 'users'
 
+    sign_in: (model) ->
+      @get('firebase.ref').authWithPassword
+        email: model.get('email')
+        password: model.get('password')
+      , (error, userData) =>
+        if error
+          console.log error
+        else
+          console.log userData
+
+
 `export default UsersRoute`

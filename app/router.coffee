@@ -12,6 +12,7 @@ Router.map ->
     @route 'edit', path: ':place_id'
     @resource 'place', path: ':place_id'
   @resource 'users', ->
+    @route 'sign-in'
     @route 'sign-up'
 
 `export default Router`
