@@ -6,7 +6,7 @@ module.exports = function(environment) {
     podModulePrefix: 'urban-thunder/pods',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
-    firebase: 'https://YOUR-FIREBASE-NAME.firebaseio.com/',
+    firebase: 'https://incandescent-fire-6856.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
