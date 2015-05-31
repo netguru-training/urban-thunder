@@ -5,7 +5,24 @@
     {{input value=model.name placeholder="name" class='input--name'}}<br>
     {{input value=model.description placeholder="description" class='input--description'}}<br>
     {{input value=model.location placeholder="location" class='input--location'}}<br>
-    <button {{action "save"}} class="primary button--save">Save</button>
+    <button {{action "save" lat lng}} class="primary button--save">Save</button>
     <button {{action "cancel"}} class='button--cancel'>Cancel</button>
   </fieldset>
 </form>
+
+<h1>Pick place's location</h1>
+
+{{google-map markers=markers
+             markerInfoWindowTemplateName='map/default-window'
+             lat=centerLat
+             lng=centerLng
+             zoom=zoom
+             gopt_zoomControl=false
+             type='map'}}
+
+<div class="controls">
+  <label>
+    Zoom:
+    {{input type="range" value=zoom min=0 max=18 step=1}}
+  </label>
+</div>
