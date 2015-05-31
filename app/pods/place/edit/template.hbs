@@ -5,11 +5,11 @@
       <form>
         <h2>{{errorMessage}}</h2>
         <fieldset>
-          {{input value=model.name placeholder="name" class='input--name'}}<br>
-          {{input value=model.description placeholder="description" class='input--description'}}<br>
-          {{input value=model.location placeholder="location" class='input--location'}}<br>
+          {{input value=model.name placeholder="name" class='form-control input--name'}}<br>
+          {{input value=model.description placeholder="description" class='form-control input--description'}}<br>
+          {{input value=model.location placeholder="location" class='form-control input--location'}}<br>
           <button {{action "save"}} class="btn btn-primary button--save">Save</button>
-          <button {{action "cancel"}} class='button--cancel'>Cancel</button>
+          <button {{action "cancel"}} class='btn btn-warning button--cancel'>Cancel</button>
         </fieldset>
       </form>
 
