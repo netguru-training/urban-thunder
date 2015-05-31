@@ -8,7 +8,7 @@ PlacesNewController = Ember.Controller.extend
   zoom: 6
 
   picker: Ember.computed ->
-    {lat: 52.4077859, lng: 16.9247929, isDraggable: true}
+    {lat: 51.9189046, lng: 19.1343786, isDraggable: true}
 
   markers: Ember.computed "picker", ->
     Ember.A([@get("picker")])
@@ -26,6 +26,8 @@ PlacesNewController = Ember.Controller.extend
         @set('centerLat', data.latitude)
         @set('centerLng', data.longitude)
         @set('zoom', 17)
-        @set('isLooking', false))
+        @set('isLooking', false)
+        @set('picker.lat', data.latitude)
+        @set('picker.lng', data.longitude))
 
 `export default PlacesNewController`
