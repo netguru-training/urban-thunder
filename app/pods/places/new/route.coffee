@@ -5,8 +5,9 @@ PlacesNewRoute = Ember.Route.extend
     return @store.createRecord 'place'
 
   actions:
-    save: ->
+    save: (lat,lng) ->
       model = this.modelFor('places/new')
+      model.setProperties({lat, lng})
       model.save().then =>
         @transitionTo('places')
       return
