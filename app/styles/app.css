@@ -4,14 +4,6 @@
   background-size: 100% 100%;
 }
 
-.table {
-  width: 35%;
-}
-
-.dashboard {
-
-}
-
 .spot {
   background-color: rgb(213, 212, 212);
   width: 13em;;
@@ -21,9 +13,17 @@
   margin: 10px;
 }
 
+.dashboard {
+  font-size: 4em;
+}
+
 .map-canvas {
   width: 600px;
   height: 400px;
+}
+
+.btn .new {
+  float: right;
 }
 
 .navbar {
@@ -71,4 +71,3 @@
     transform: rotate(359deg);
   }
 }
-
