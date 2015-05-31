@@ -10,7 +10,7 @@ UsersSignInRoute = Ember.Route.extend
         'email': model.get('email')
         'password': model.get('password')
       ).then =>
-        @transitionTo 'landing-page'
+        @transitionTo 'places'
       , (error) ->
         console.log 'authError'
 
