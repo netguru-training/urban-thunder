@@ -10,19 +10,7 @@
   </fieldset>
 </form>
 
-<h1>Pick place's location</h1>
-
-{{google-map markers=markers
-             markerInfoWindowTemplateName='map/default-window'
-             lat=centerLat
-             lng=centerLng
-             zoom=zoom
-             gopt_zoomControl=false
-             type='map'}}
-
-<div class="controls">
-  <label>
-    Zoom:
-    {{input type="range" value=zoom min=0 max=18 step=1}}
-  </label>
-</div>
+{{location-map  markers=markers
+                centerLat=centerLat
+                centerLng=centerLng
+                zoom=zoom}}

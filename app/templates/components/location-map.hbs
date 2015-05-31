@@ -1,0 +1,14 @@
+{{google-map markers=markers
+             markerInfoWindowTemplateName='map/default-window'
+             lat=centerLat
+             lng=centerLng
+             zoom=zoom
+             gopt_zoomControl=false
+             type='map'}}
+
+<div class="controls">
+  <label>
+    Zoom:
+    {{input type="range" value=zoom min=0 max=18 step=1}}
+  </label>
+</div>
