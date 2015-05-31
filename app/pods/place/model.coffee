@@ -7,6 +7,7 @@ Place = DS.Model.extend {
   user: DS.belongsTo 'user'
   lat: DS.attr 'string'
   lng: DS.attr 'string'
+  comments: DS.hasMany 'comment', async: true
 }
 
 `export default Place`

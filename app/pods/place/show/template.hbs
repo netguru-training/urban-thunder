@@ -16,3 +16,10 @@
     </div>
   </div>
 </div>
+
+<h3>Comments</h3>
+{{#each comment in model.comments}}
+  <li>{{comment.text}}</li>
+{{/each}}
+
+{{outlet}}
