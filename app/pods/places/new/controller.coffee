@@ -50,6 +50,9 @@ PlacesNewController = Ember.Controller.extend
       @get('geocoding').reverseFind(lat,lng).then (data) =>
         address = data.results[0].formatted_address
         @set('model.location', address)
+        @set('centerLat', lat)
+        @set('centerLng', lng)
+        @set('zoom', 17)
 
     setPointer: ->
       Ember.run.debounce(@, @_findAddress, 1000)
