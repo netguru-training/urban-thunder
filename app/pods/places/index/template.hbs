@@ -1,25 +1,34 @@
-<div class="container-float dashboard">
+<div class="container dashboard">
   DASHBOARD
 </div>
-<table class="table">
-  <thead>
-    <tr>
-      <th>name</th>
-      <th>location</th>
-    </tr>
-  </thead>
-  <tbody>
-  {{#each place in model}}
-    <tr>
-      <td class="primary">
-        {{#link-to 'place' place}}
-          {{place.name}}
-        {{/link-to}}
-      </td>
-      <td>
-        {{place.location}}
-      </td>
-    </tr>
-  {{/each}}
-  </tbody>
-</table>
+<div class="row">
+  <div class="col col-sm-6 col-md-6 col-lg-6">
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>location</th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each place in model}}
+          <tr>
+            <td class="primary">
+              {{#link-to 'place' place}}
+                {{place.name}}
+              {{/link-to}}
+            </td>
+            <td>
+              {{place.location}}
+            </td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col col-sm-6 col-md-6 col-lg-6">
+    
+  </div>
+</div>

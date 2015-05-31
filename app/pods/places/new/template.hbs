@@ -1,15 +1,22 @@
-<h2>Adding new place</h2>
-<form>
-  <h2>{{errorMessage}}</h2>
-  <fieldset>
-    {{input value=model.name placeholder="name" class='input--name'}}<br>
-    {{input value=model.description placeholder="description" class='input--description'}}<br>
-    {{input value=model.location placeholder="location" class='input--location'}}<br>
-    <button {{action "save" lat lng}} class="primary button--save">Save</button>
-    <button {{action "cancel"}} class='button--cancel'>Cancel</button>
-  </fieldset>
-</form>
-
-{{location-map  markers=markers
-                centerLat=centerLat
-                centerLng=centerLng}}
+<div class="row">
+  <div class="container">
+    <div class="col col-sm-6 col-md-4 col-lg-4">
+      <h2>Adding new place</h2>
+      <form>
+        <h2>{{errorMessage}}</h2>
+        <fieldset>
+          {{input value=model.name placeholder="name" class='input--name'}}<br>
+          {{input value=model.description placeholder="description" class='input--description'}}<br>
+          {{input value=model.location placeholder="location" class='input--location'}}<br>
+          <button {{action "save" lat lng}} class="primary button--save">Save</button>
+          <button {{action "cancel"}} class='button--cancel'>Cancel</button>
+        </fieldset>
+      </form>
+    </div>
+    <div class="col col-sm-6 col-md-8 col-lg-8">
+      {{location-map  markers=markers
+                      centerLat=centerLat
+                      centerLng=centerLng}}
+    </div>
+  </div>
+</div>
