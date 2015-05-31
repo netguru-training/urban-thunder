@@ -8,11 +8,12 @@
           {{input value=model.name placeholder="name" class='form-control input--name'}}<br>
           {{input value=model.description placeholder="description" class='form-control input--description'}}<br>
           {{input value=model.location placeholder="address" class='form-control input--location'}}<br>
-          <button {{action "save" lat lng}} class="btn btn-sm btn-primary button--save">Save</button>
-          <button {{action "cancel"}} class='btn btn-sm btn-warning button--cancel'>Cancel</button>
-
-          <button {{action "findAddress" model.location}} class='btn btn-sm button--find-location'>
+          <button {{action "findAddress" model.location}} class='btn btn-sm btn-success button--find-location'>
             Find my address
+          </button>
+
+          <button {{action "reverseGeocoding" model.location}} class='btn btn-sm btn-success button--find-location'>
+            Reverse geocoding
           </button>
 
           {{# if isLooking }}
@@ -25,6 +26,11 @@
               Find my current location
             </button>
           {{/if}}
+
+          <br />
+          <br />
+          <button {{action "save" lat lng}} class="btn btn-sm btn-primary button--save">Save</button>
+          <button {{action "cancel"}} class='btn btn-sm btn-warning button--cancel'>Cancel</button>
         </fieldset>
       </form>
     </div>
