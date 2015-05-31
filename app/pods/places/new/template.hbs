@@ -12,12 +12,16 @@
           <button {{action "cancel"}} class='btn btn-sm btn-warning button--cancel'>Cancel</button>
 
           {{# if isLooking }}
-            <button {{action "findLocation"}} class='btn btn-sm button--find-location'>
-              <span class="spinner"><i class="icon-spin icon-refresh"></i></span>
+            <button {{action "findLocation"}} class='btn btn-sm btn-success button--find-location'>
+              <span class="glyphicon glyphicon-repeat gly-spin" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-repeat gly-spin" aria-hidden="true"></span>
               I'm looking for your location
             </button>
           {{else}}
-            <button {{action "findLocation"}} class='btn btn-sm btn-warning button--find-location'>Find my location</button>
+            <button {{action "findLocation"}} class='btn btn-sm btn-success button--find-location'>
+              <!-- <span class="glyphicon glyphicon-repeat gly-spin" aria-hidden="true"></span> -->
+              Find my location
+            </button>
           {{/if}}
         </fieldset>
       </form>
