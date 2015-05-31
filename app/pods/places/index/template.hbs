@@ -1,10 +1,10 @@
-{{#each place in model}}
-  <div class="spot">
-    {{#link-to 'place' place}}
-      <p>CO: {{place.name}}</p>
-    {{/link-to}}
-    <p>JAK: {{place.description}}</p>
-    <p>GDZIE: {{place.location}}</p>
-  </div>
-{{/each}}
-{{outlet}}
+
+  {{#each place in model}}
+    <div class="spot">
+      {{#link-to 'place' place}}
+        CO: {{place.name}}
+      {{/link-to}}
+      JAK: {{place.description}}
+      GDZIE: {{place.location}}
+    </div>
+  {{/each}}
