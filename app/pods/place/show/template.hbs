@@ -9,7 +9,7 @@
       {{/link-to}}
       <div class="comments">
         <h3>Comments</h3>
-        {{#each comment in model.comments}}
+        {{#each comment in filteredComments}}
           <li>{{comment.text}}</li>
         {{/each}}
         {{outlet}}
