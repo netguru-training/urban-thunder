@@ -15,4 +15,6 @@ PlaceShowController = Ember.Controller.extend
   centerLat: Ember.computed.alias('model.lat')
   centerLng: Ember.computed.alias('model.lng')
 
+  filteredComments: Ember.computed.filterBy 'model.comments', 'isNew', false
+
 `export default PlaceShowController`

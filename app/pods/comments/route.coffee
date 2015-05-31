@@ -7,9 +7,12 @@ CommentsRoute = Ember.Route.extend
 
   actions:
     save: (model) ->
+      place = @modelFor('place/show')
       model.save().then =>
-        console.log 'foo'
-      , =>
-        console.log 'bar'
+        place.save().then =>
+          newRecord = @store.createRecord 'comment',
+            place: place
+          @controller.set('model', newRecord)
+
 
 `export default CommentsRoute`
