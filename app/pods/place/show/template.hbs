@@ -7,19 +7,20 @@
       {{#link-to 'place.edit' model}}
         <button class="btn btn-sm btn-info">edit</button>
       {{/link-to}}
+      <div class="comments">
+        <h3>Comments</h3>
+        {{#each comment in model.comments}}
+          <li>{{comment.text}}</li>
+        {{/each}}
+        {{outlet}}
+      </div>
     </div>
     <div class="col col-sm-6 col-md-4 col-lg-4">
       {{location-map  markers=markers
                       centerLat=centerLat
                       centerLng=centerLng
-                      zoom=17}}
+                      zoom=17
+                      gopt_draggable=false}}
     </div>
   </div>
 </div>
-
-<h3>Comments</h3>
-{{#each comment in model.comments}}
-  <li>{{comment.text}}</li>
-{{/each}}
-
-{{outlet}}
