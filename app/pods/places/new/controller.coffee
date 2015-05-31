@@ -17,12 +17,15 @@ PlacesNewController = Ember.Controller.extend
   lng: Ember.computed.alias('picker.lng')
 
   geoLocation: Ember.inject.service()
+  isLooking: false
 
   actions:
     findLocation: ->
+      @set('isLooking', true)
       @get('geoLocation').current().then((data) =>
         @set('centerLat', data.latitude)
         @set('centerLng', data.longitude)
-        @set('zoom', 17))
+        @set('zoom', 17)
+        @set('isLooking', false))
 
 `export default PlacesNewController`

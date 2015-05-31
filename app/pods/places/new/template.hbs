@@ -10,6 +10,12 @@
           {{input value=model.location placeholder="location" class='form-control input--location'}}<br>
           <button {{action "save" lat lng}} class="btn btn-sm btn-primary button--save">Save</button>
           <button {{action "cancel"}} class='btn btn-sm btn-warning button--cancel'>Cancel</button>
+
+          {{# if isLooking }}
+            <p>I'm looking for your location</p>
+          {{else}}
+            <button {{action "findLocation"}} class='btn btn-sm btn-warning button--find-location'>Find my location</button>
+          {{/if}}
         </fieldset>
       </form>
     </div>
