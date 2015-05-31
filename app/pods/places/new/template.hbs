@@ -12,7 +12,10 @@
           <button {{action "cancel"}} class='btn btn-sm btn-warning button--cancel'>Cancel</button>
 
           {{# if isLooking }}
-            <p>I'm looking for your location</p>
+            <button {{action "findLocation"}} class='btn btn-sm button--find-location'>
+              <span class="spinner"><i class="icon-spin icon-refresh"></i></span>
+              I'm looking for your location
+            </button>
           {{else}}
             <button {{action "findLocation"}} class='btn btn-sm btn-warning button--find-location'>Find my location</button>
           {{/if}}
