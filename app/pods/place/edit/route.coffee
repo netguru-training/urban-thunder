@@ -6,11 +6,11 @@ PlacesEditRoute = Ember.Route.extend AuthenticatedRouteMixin,
     save: ->
       model = this.modelFor('place/edit')
       model.save().then =>
-        @transitionTo('places/index')
+        @transitionTo('place')
       return
 
     cancel: ->
-      @transitionTo('places/index')
+      @transitionTo('place')
       return
 
   deactivate: ->
