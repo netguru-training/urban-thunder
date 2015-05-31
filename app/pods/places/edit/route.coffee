@@ -5,11 +5,11 @@ PlacesEditRoute = Ember.Route.extend
     save: ->
       model = this.modelFor('places/edit')
       model.save().then =>
-        @transitionTo('places')
+        @transitionTo('places/index')
       return
 
     cancel: ->
-      @transitionTo('places')
+      @transitionTo('places/index')
       return
 
   deactivate: ->
