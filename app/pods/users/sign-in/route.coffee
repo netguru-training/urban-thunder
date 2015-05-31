@@ -9,8 +9,8 @@ UsersSignInRoute = Ember.Route.extend
       @get('session').authenticate('authenticator:firebase',
         'email': model.get('email')
         'password': model.get('password')
-      ).then ->
-        console.log 'authSuccess'
+      ).then =>
+        @transitionTo 'landing-page'
       , (error) ->
         console.log 'authError'
 

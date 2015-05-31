@@ -1,6 +1,7 @@
 `import Ember from 'ember'`
+`import AuthenticatedRouteMixin from 'simple-auth/mixins/authenticated-route-mixin'`
 
-PlacesNewRoute = Ember.Route.extend
+PlacesNewRoute = Ember.Route.extend AuthenticatedRouteMixin,
   model: ->
     return @store.createRecord 'place'
 
