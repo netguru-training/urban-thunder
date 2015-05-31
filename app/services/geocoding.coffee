@@ -3,15 +3,17 @@
 AddressGeocodingService = Ember.Service.extend
   urlBase: "https://maps.googleapis.com/maps/api/geocode/json?"
 
+  base: (params) ->
+    urlFull = @get('urlBase') + params
+    Ember.$.getJSON(urlFull)
+
   find: (address) ->
     addressParams = 'address=' + address.split(' ').join('+')
-    urlFull = @get('urlBase') + addressParams
-    Ember.$.getJSON(urlFull)
+    @base(addressParams)
 
   reverseFind: (lat, lng) ->
     coordsParams = 'latlng=' + lat.toString() + ',' + lng.toString()
-    urlFull = @get('urlBase') + coordsParams
-    Ember.$.getJSON(urlFull)
+    @base(coordsParams)
+
 
 `export default AddressGeocodingService`
-
