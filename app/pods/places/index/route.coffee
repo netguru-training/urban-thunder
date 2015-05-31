@@ -1,7 +1,8 @@
 `import Ember from 'ember'`
+`import AuthenticatedRouteMixin from 'simple-auth/mixins/authenticated-route-mixin'`
 
-PlacesIndexRoute = Ember.Route.extend
+PlacesIndexRoute = Ember.Route.extend AuthenticatedRouteMixin,
   model: ->
-    this.store.findAll('place')
+    @store.findAll('place')
 
 `export default PlacesIndexRoute`

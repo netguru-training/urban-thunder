@@ -22,6 +22,10 @@ module.exports = function(environment) {
     }
   };
 
+  ENV['simple-auth'] = {
+    authenticationRoute: 'users.sign-in'
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;

@@ -1,6 +1,7 @@
 `import Ember from 'ember'`
+`import AuthenticatedRouteMixin from 'simple-auth/mixins/authenticated-route-mixin'`
 
-PlacesEditRoute = Ember.Route.extend
+PlacesEditRoute = Ember.Route.extend AuthenticatedRouteMixin,
   actions:
     save: ->
       model = this.modelFor('place/edit')
