@@ -4,7 +4,8 @@ UsersSignOutRoute = Ember.Route.extend
   firebase: Ember.inject.service()
 
   activate: ->
-    @get('firebase.ref').unauth()
-    @transitionTo 'application'
+    @get('session').invalidate().then =>
+      @transitionTo 'landing-page'
+    return
 
 `export default UsersSignOutRoute`

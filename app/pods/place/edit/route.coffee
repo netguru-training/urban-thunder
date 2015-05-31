@@ -3,7 +3,7 @@
 PlacesEditRoute = Ember.Route.extend
   actions:
     save: ->
-      model = this.modelFor('places/edit')
+      model = this.modelFor('place/edit')
       model.save().then =>
         @transitionTo('places/index')
       return
@@ -13,7 +13,7 @@ PlacesEditRoute = Ember.Route.extend
       return
 
   deactivate: ->
-    model = @modelFor('places/edit')
+    model = @modelFor('place/edit')
     model.rollback()
 
 `export default PlacesEditRoute`
