@@ -7,7 +7,7 @@
         <fieldset>
           {{input value=model.name placeholder="name" class='form-control input--name'}}<br>
           {{input value=model.description placeholder="description" class='form-control input--description'}}<br>
-          {{input value=model.location placeholder="address" class='form-control input--location'}}<br>
+          {{input value=model.location placeholder="address" class='form-control input--location' action="setPointer" on="key-press"}}<br>
           <button {{action "findAddress" model.location}} class='btn btn-sm btn-success button--find-location'>
             Find my address
           </button>

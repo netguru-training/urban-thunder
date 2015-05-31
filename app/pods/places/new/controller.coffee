@@ -22,6 +22,9 @@ PlacesNewController = Ember.Controller.extend
 
   geocoding: Ember.inject.service()
 
+  _findAddress: ->
+    @send('findAddress', @get('model.location'))
+
   actions:
     findLocation: ->
       @set('isLooking', true)
@@ -47,5 +50,8 @@ PlacesNewController = Ember.Controller.extend
       @get('geocoding').reverseFind(lat,lng).then (data) =>
         address = data.results[0].formatted_address
         @set('model.location', address)
+
+    setPointer: ->
+      Ember.run.debounce(@, @_findAddress, 1000)
 
 `export default PlacesNewController`
