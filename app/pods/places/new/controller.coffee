@@ -19,6 +19,8 @@ PlacesNewController = Ember.Controller.extend
   geoLocation: Ember.inject.service()
   isLooking: false
 
+  addressGeocoding: Ember.inject.service()
+
   actions:
     findLocation: ->
       @set('isLooking', true)
@@ -29,5 +31,15 @@ PlacesNewController = Ember.Controller.extend
         @set('isLooking', false)
         @set('picker.lat', data.latitude)
         @set('picker.lng', data.longitude))
+
+    findAddress: (address) ->
+      @get('addressGeocoding').find(address).then((data) =>
+        lat = data.results[0].geometry.location.lat
+        lng = data.results[0].geometry.location.lng
+        @set('centerLat', lat)
+        @set('centerLng', lng)
+        @set('zoom', 17)
+        @set('picker.lat', lat)
+        @set('picker.lng', lng))
 
 `export default PlacesNewController`

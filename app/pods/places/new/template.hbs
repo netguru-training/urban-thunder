@@ -7,20 +7,22 @@
         <fieldset>
           {{input value=model.name placeholder="name" class='form-control input--name'}}<br>
           {{input value=model.description placeholder="description" class='form-control input--description'}}<br>
-          {{input value=model.location placeholder="location" class='form-control input--location'}}<br>
+          {{input value=model.location placeholder="address" class='form-control input--location'}}<br>
           <button {{action "save" lat lng}} class="btn btn-sm btn-primary button--save">Save</button>
           <button {{action "cancel"}} class='btn btn-sm btn-warning button--cancel'>Cancel</button>
 
+          <button {{action "findAddress" model.location}} class='btn btn-sm button--find-location'>
+            Find my address
+          </button>
+
           {{# if isLooking }}
-            <button {{action "findLocation"}} class='btn btn-sm btn-success button--find-location'>
-              <span class="glyphicon glyphicon-repeat gly-spin" aria-hidden="true"></span>
+            <button {{action "findLocation"}} disabled={{isLooking}}  class='btn btn-sm btn-success button--find-location'>
               <span class="glyphicon glyphicon-repeat gly-spin" aria-hidden="true"></span>
               I'm looking for your location
             </button>
           {{else}}
             <button {{action "findLocation"}} class='btn btn-sm btn-success button--find-location'>
-              <!-- <span class="glyphicon glyphicon-repeat gly-spin" aria-hidden="true"></span> -->
-              Find my location
+              Find my current location
             </button>
           {{/if}}
         </fieldset>
