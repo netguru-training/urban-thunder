@@ -17,6 +17,12 @@ PlacesNewRoute = Ember.Route.extend AuthenticatedRouteMixin,
       @transitionTo('places')
       return
 
+    # findLocation: ->
+
+  centerLat: 52.4077859
+  centerLng: 16.9247929
+
+
   deactivate: ->
     model = @modelFor('places/new')
     if model.get('isNew')
