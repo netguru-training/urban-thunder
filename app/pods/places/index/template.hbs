@@ -1,10 +1,25 @@
-
+<div class="container-float dashboard">
+  DASHBOARD
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>location</th>
+    </tr>
+  </thead>
+  <tbody>
   {{#each place in model}}
-    <div class="spot">
-      {{#link-to 'place' place}}
-        CO: {{place.name}}
-      {{/link-to}}
-      JAK: {{place.description}}
-      GDZIE: {{place.location}}
-    </div>
+    <tr>
+      <td class="primary">
+        {{#link-to 'place' place}}
+          {{place.name}}
+        {{/link-to}}
+      </td>
+      <td>
+        {{place.location}}
+      </td>
+    </tr>
   {{/each}}
+  </tbody>
+</table>
