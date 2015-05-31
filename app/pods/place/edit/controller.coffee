@@ -4,8 +4,8 @@ PlaceEditController = Ember.Controller.extend
   geoLocation: Ember.inject.service()
   zoom: 17
 
-  picker: Ember.computed 'centerLat', 'centerLng', ->
-    {lat: @get('centerLat'), lng: @get('centerLng'), isDraggable: true}
+  picker: Ember.computed 'lat', 'lng', ->
+    {lat: @get('lat'), lng: @get('lng'), isDraggable: false}
 
   markers: Ember.computed "picker", ->
     Ember.A([@get("picker")])
