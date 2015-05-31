@@ -1,7 +1,7 @@
 `import Ember from 'ember'`
 
-PlacesRoute = Ember.Route.extend
+PlacesIndexRoute = Ember.Route.extend
   model: ->
-    @store.findAll('place')
+    this.store.findAll('place')
 
-`export default PlacesRoute`
+`export default PlacesIndexRoute`

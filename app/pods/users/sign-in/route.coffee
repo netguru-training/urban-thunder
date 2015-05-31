@@ -1,8 +1,6 @@
 `import Ember from 'ember'`
 
 UsersSignInRoute = Ember.Route.extend
-  firebase: Ember.inject.service()
-
   model: ->
     @store.createRecord 'user'
 
@@ -15,6 +13,9 @@ UsersSignInRoute = Ember.Route.extend
         console.log 'authSuccess'
       , (error) ->
         console.log 'authError'
+
+  activate: ->
+    @transitionTo 'landing-page' if @get('session.isAuthenticated')
 
 
 `export default UsersSignInRoute`
